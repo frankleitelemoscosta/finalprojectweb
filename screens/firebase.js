@@ -15,7 +15,7 @@ firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
 
 
-/*async function Siguin()
+async function Siguin()
 {
     //pick elements of the register page
     var name = document.getElementById("nameid");
@@ -33,11 +33,14 @@ var db = firebase.firestore();
         name: submit_name,
         email: submit_email,
         password: submit_phone
-    });}
+    });
+    alert('User created with successful!')
+    window.location.href = './login.html';
+  }
     else{
       alert('not possible register the user in the data bank, because the password and confirm password is different')
     }
-}*/
+}
 
 //for recovery data
 async function login(){
@@ -45,8 +48,6 @@ async function login(){
   var password = document.getElementById("passwordid").value;
   var email = document.getElementById("emailid");
   var dados;
-
-  alert('Chegou aqui');
 
     const documento = db.collection('People')
     const snapshot = await documento.where("email","==",email.value).get()

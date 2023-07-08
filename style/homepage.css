@@ -65,7 +65,7 @@
 }
 
 .div2{
-  display: inline-block;
+  display: block;
   width: 50%;
   text-align: right;
 }
