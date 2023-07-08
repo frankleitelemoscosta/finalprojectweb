@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Mane</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="firebase.js"></script>
+    
+    <link rel="stylesheet" href="../style/login.css">
+
+</head>
+<body class="BackPicture">
+    <!--tag where is the page-->
+    <div class="container">
+        <table  class="TableDecore">
+            <tr>
+                <td>
+                    <strong><label for="email">Email:</label></strong><br>
+                    <input type="email" name="email" id="emailid" class="login" required> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong><label for="email">Password:</label></strong><br>
+                    <input type="password" name="password" id="passwordid" class="login" required>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a><button id="login" type="button" class="login" style="background-color: blue; color: white; border-color: transparent; border-radius: 20%;" onclick="login()">Login</button>
+                    </a>                
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="register.html"><text-button style="background-color: transparent; " id="login-button">Register</text-button></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

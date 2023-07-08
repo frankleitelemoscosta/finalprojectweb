@@ -1,0 +1,20 @@
+.BackPicture{
+    background-image: url(../image/Mane-Water-Logo.png);
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center center;
+}
+
+.TableDecore{
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color:  rgb(2, 159, 191);
+}
+
+.container {
+    display: flex; /* Ativa o modelo flexível */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    width: 100%; /* Define a largura do container como 100% do elemento pai */
+    height: 100vh; /* Define a altura do container como 100% da altura da viewport */
+}

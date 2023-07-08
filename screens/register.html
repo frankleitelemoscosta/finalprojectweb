@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register page</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <!--<script src="firebase.js"></script>-->
+
+    <link rel="stylesheet" href="../style/register.css">
+
+
+</head>
+<body style="background-image: url('../image/back-register.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <div class="container">  
+                <form id="signupForm">    
+                <table class="DecorTable">
+                    <tr>
+                        <td style="padding: 10px;">
+                            <strong><label for="name">Name: (mudar de lugar)</label></strong><br>
+                            <input type="text" name="name" id="nameid" class="Siguin" required>
+                        </td>    
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">
+                            <strong><label for="email"">Email:</label></strong><br>
+                            <input type="email" name="email" id="emailid" class="Siguin" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">
+                            <strong><label for="password">Password:</label></strong><br>
+                            <input type="password" name="password" id="passwordid" class="Siguin" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">
+                            <strong><label for="confirmpassword">Confirm your password:</label></strong><br>
+                            <input type="password" name="confirmpassword" id="confirmpasswordid">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;" align="center">
+                            <a href="homepage.html"><button id="submitBtn" type="submit" class="Siguin" style="background-color: blue; color: white; border-color: transparent; border-radius: 20%;" onclick="Siguin()">Submit</button></a>
+                        </td>
+                    </tr>
+                    <!--<tr>
+                        <td style="padding: 10px;" align="center">
+                            <a><button id="Updateid" type="submit" class="Update" style="background-color: blue; color: white; border-color: transparent; border-radius: 20%;" onclick="Update()">Update</button></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;" align="center">
+                            <a><button id="returnid" type="submit" class="returnId" style="background-color: blue; color: white; border-color: transparent; border-radius: 20%;" onclick="returnId()">return Id</button></a>
+                        </td>
+                    </tr>-->
+                </table>
+            </form>
+            </div>
+</body>
+</html>
