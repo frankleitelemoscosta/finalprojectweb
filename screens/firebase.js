@@ -1,4 +1,7 @@
 var Search_id = 0;
+var new_name;
+var new_email;
+var new_password;
 
 const firebaseConfig = {
   apiKey: "AIzaSyAzBf1RLFrWrGGOh-arv7_96K9BYEHEu2I",
@@ -68,6 +71,55 @@ async function login(){
 
 }
 
+//for delete user:
+function Delete(){
+  const documento = db.collection('People').doc(Search_id).delete();
+  alert('user delete with susscceful');
+}
+
+
+
+//for recovery id and update
+async function returnId()
+{
+  var name = document.getElementById("nameidreturn").value;
+  var id_docomento = 0;
+  const people = db.collection('People')
+  const snapshot = await people.where('name','==',name).get()
+  
+
+  snapshot.forEach(doc => {
+    var dados = doc.data();
+    id_documento = doc.id
+    
+    if(dados.name == name)
+    {
+      alert(dados.name);
+      alert(dados.email);
+    }
+    else{
+      alert('this user not exist.');
+    }
+  })
+  Search_id = id_documento;
+}
+
+async function Update(){
+
+  new_name = document.getElementById("nameid").value;
+  new_email = document.getElementById("emailid").value;
+  new_password = document.getElementById("passwordid").value;
+
+  const people = db.collection('People').doc(Search_id)
+  people.update({
+    name: new_name,
+    email: new_email,
+    password: new_password
+  })
+  alert('update susscceful');
+
+
+}
 
 //for update
 /*const documento = db.collection('People').doc('3')
@@ -84,33 +136,3 @@ name: 'Frank leite',
 email: 'frankleite090@gmail.com',
 phone: '31996449587'
 })*/
-
-//for delete user:
-//const documento = db.collection('People').doc('4').delete()
-
-//for recovery id and update
-/*async function returnId()
-{
-  var name = document.getElementById("nameid");
-  var id_docomento = 0;
-  name = name.value;
-  const people = db.collection('People')
-  const snapshot = await people.where('name','==',name).get()
-
-  snapshot.forEach(doc => {
-    var dados = doc.data();
-    id_documento = doc.id
-    console.log(doc.id,' : ',dados.name,dados.email,dados.telefone)
-
-  })
-  Search_id = id_documento;
-}
-
-async function Update(){
-  const people = db.collection('People').doc(Search_id)
-  people.update({
-    name: 'Frank brabao',
-    email: 'frankleite090@gmail.com',
-    phone: '5544451'
-  })
-}*/

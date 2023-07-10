@@ -1,0 +1,13 @@
+.BackPicture{
+    background-image: url(../image/account.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajuste a altura conforme necessário */
+}
+
+.TableDecore{
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color:  rgb(2, 159, 191);
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="firebase.js"></script>
+
+    <link rel="stylesheet" href="../style/myaccount.css">
+</head>
+<body class="BackPicture">
+    <div class="container">
+        <table  class="TableDecore">
+            <tr>
+                <td>
+                    <strong><label for="name" style="color: black;">Search Name:</label></strong><br>
+                    <input type="text" name="name" id="nameidreturn" class="returnId" required>
+                </td>    
+            </tr>
+            <tr>
+                <td>
+                    <strong><label for="name" style="color: black;">New Name:</label></strong><br>
+                    <input type="text" name="name" id="nameid" class="Siguin" required>
+                </td>    
+            </tr>
+            <tr>
+                <td>
+                    <strong><label for="email" style="color: black;">New Email:</label></strong><br>
+                    <input type="email" name="email" id="emailid" class="login" required> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong><label for="email" style="color: black;">New Password:</label></strong><br>
+                    <input type="password" name="password" id="passwordid" class="login" required>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;" align="center">
+                    <a><button id="Updateid" type="submit" class="Update" style="background-color: blue; color: white; border-color: transparent; border-radius: 20%;" onclick="Update()">Update</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;" align="center">
+                    <a><button id="returnid" type="submit" class="returnId" style="background-color: blue; color: white; border-color: transparent; border-radius: 20%;" onclick="returnId()">return Id</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="deletaccount.html"><text-button style="background-color: transparent; " id="deletepage-button">Delete</text-button></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
