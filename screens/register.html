@@ -8,7 +8,7 @@
     <title>Register page</title>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-    <script src="firebase.js"></script>
+    <script src="../server/firebase.js"></script>
 
     <link rel="stylesheet" href="../style/register.css">
 
@@ -21,19 +21,19 @@
                     <tr>
                         <td style="padding: 10px;">
                             <strong><label for="name">Name:</label></strong><br>
-                            <input type="text" name="name" id="nameid" class="Siguin" required>
+                            <input type="text" name="name" id="nameid" class="SiguiUp" required>
                         </td>    
                     </tr>
                     <tr>
                         <td style="padding: 10px;">
                             <strong><label for="email"">Email:</label></strong><br>
-                            <input type="email" name="email" id="emailid" class="Siguin" required>
+                            <input type="email" name="email" id="emailid" class="SiguiUp" required>
                         </td>
                     </tr>
                     <tr>
                         <td style="padding: 10px;">
                             <strong><label for="password">Password:</label></strong><br>
-                            <input type="password" name="password" id="passwordid" class="Siguin" required>
+                            <input type="password" name="password" id="passwordid" class="SiguiUp" required>
                         </td>
                     </tr>
                     <tr>
@@ -44,7 +44,7 @@
                     </tr>
                     <tr>
                         <td style="padding: 10px;" align="center">
-                            <button id="submitBtn" type="button" class="Siguin" style="background-color: blue; color: white; border-color: transparent; border-radius: 20%;" onclick="Siguin()">Submit</button>
+                            <button id="submitBtn" type="button" class="SiguiUp" style="background-color: blue; color: white; border-color: transparent; border-radius: 20%;" onclick="SiguiUp()">Submit</button>
                         </td>
                     </tr>
                 </table>
