@@ -1,4 +1,4 @@
-var Search_id = 0;
+
 var new_name;
 var new_email;
 var new_password;
@@ -17,91 +17,11 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
 
-async function SiguiUp()
-{
-    //pick elements of the register page
-    var name = document.getElementById("nameid");
-    var email = document.getElementById("emailid");
-    var password = document.getElementById("passwordid");
-    var confirm_password = document.getElementById("confirmpasswordid").value;
-
-    var submit_name = name.value;
-    var submit_email = email.value;
-    var submit_phone = password.value;
-    var newregister;
-    
-    if( password.value == confirm_password ){
-        newregister = await db.collection('People').add({
-        name: submit_name,
-        email: submit_email,
-        password: submit_phone
-    });
-    alert('User created with successful!')
-    window.location.href = './login.html';
-  }
-    else{
-      alert('not possible register the user in the data bank, because the password and confirm password is different')
-    }
-}
-
-//for recovery data
-async function login(){
-
-  var password = document.getElementById("passwordid").value;
-  var email = document.getElementById("emailid");
-  var dados;
-
-    const documento = db.collection('People')
-    const snapshot = await documento.where("email","==",email.value).get()
-    //const snapshot = await documento.get()
-    snapshot.forEach(doc => {
-      dados = doc.data()
-      console.log(doc.id, ': ',dados.name,dados.email,dados.password)
-      if(email.value == dados.email && password == dados.password)
-      {
-        alert('login successful!');
-        window.location.href = './homepage.html';
-      }
-      else{
-        alert('this user not exist in data bank')
-      }
-
-    });
-
-}
-
-//for delete user:
-function Delete(){
-  const documento = db.collection('People').doc(Search_id).delete();
-  alert('user delete with susscceful');
-}
 
 
 
-//for recovery id and update
-async function returnId()
-{
-  var name = document.getElementById("nameidreturn").value;
-  var id_docomento = 0;
-  const people = db.collection('People')
-  const snapshot = await people.where('name','==',name).get()
-  
 
-  snapshot.forEach(doc => {
-    var dados = doc.data();
-    id_documento = doc.id
-    
-    if(dados.name == name)
-    {
-      alert(dados.name);
-      alert(dados.email);
-    }
-    else{
-      alert('this user not exist.');
-    }
-  })
-  Search_id = id_documento;
-}
+
 
 async function Update(){
 
